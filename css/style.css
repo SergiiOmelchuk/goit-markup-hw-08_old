@@ -1,37 +1,164 @@
 /* 
-main font-color #212121;
-seconf font-color : #757575;
+main #212121;
+seconf color #757575;
 main background color: #FFFFFF;
 background: #F5F4FA;
 blue-color: #2196F3;
 */
 
+/* General styles */
+
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+header {
+    background: #FFFFFF;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none    ;
+}
+
+/* Header styles */
 
 .logo {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
-  /* identical to box height */
+  line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: #2196f3;
 }
 
-.logo-span {
+.logo-studio {
     color: #212121;
 }
 
 .navigation a {
-    font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        color: #212121;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #212121;
 }
 
 .navigation a:hover, .navigation a:focus {
+    color: #2196F3;
+}
+
+.header-email {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #2196F3;
+}
+
+.header-phone {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+
+/* Hero styles */
+
+.hero {
+    background: #2F303A;
+}
+
+.hero-tittle {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.button-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.button {
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* Preferences styles */
+
+.preferences-tittle {
+
+font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.preferences-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+/* Services styles */
+
+.services-tittle, .team-tittle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+/* Team styles */
+
+.team {
+    background: #F5F4FA;
+}
+/* Footer styles */
+
+footer {
+    background: #2F303A;
+}
+
+.footer-adress {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.footer-email {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-email:hover {
     color: #2196F3;
 }
