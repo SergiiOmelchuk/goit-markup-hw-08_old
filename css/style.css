@@ -1,22 +1,22 @@
 /* General styles */
 
 :root {
-  --main-background-color: #ffffff;
-  --first_background-color: #2f303a;
-  --second-background-color: #f5f4fa;
-  --text-color: #757575;
-  --focus-color: #2196f3;
-  --hero-text-color: #ffffff;
+  --page-background-color: #ffffff;
+  --primary-background-color: #2f303a;
+  --secondary-background-color: #f5f4fa;
+  --main-text-color: #757575;
+  --primary-accent-color: #2196f3;
+  --secondary-accent-color: #ffffff;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --second-logo-color: #000000;
-  --main-body-color: #212121;
+  --tittle-color: #212121;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  background-color: var(--main-background-color);
-  color: var(--main-body-color);
+  background-color: var(--page-background-color);
+  color: var(--tittle-color);
 }
 
 a {
@@ -35,7 +35,7 @@ a {
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
-  color: var(--focus-color);
+  color: var(--primary-accent-color);
 }
 
 .header-logo-studio {
@@ -52,7 +52,7 @@ a {
 
 .navigation a:hover,
 .navigation a:focus {
-  color: var(--focus-color);
+  color: var(--primary-accent-color);
 }
 
 .header-email {
@@ -60,7 +60,7 @@ a {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
 
 .header-phone {
@@ -68,20 +68,20 @@ a {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
 
 .header-email:hover,
 .header-email:focus,
 .header-phone:hover,
 .header-phone:focus{
-  color: var(--focus-color);
+  color: var(--primary-accent-color);
 }
 
 /* Hero styles */
 
 .hero {
-  background: var(--first_background-color);
+  background: var(--primary-background-color);
 }
 
 .hero-tittle {
@@ -91,12 +91,12 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--hero-text-color);
+  color: var(--secondary-accent-color);
 }
 
 
 .hero-button {
-  background: var(--focus-color);
+  background: var(--primary-accent-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -105,7 +105,7 @@ a {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: var(--hero-text-color);
+  color: var(--secondary-accent-color);
 }
 
 .button {
@@ -124,7 +124,7 @@ a {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
 
 /* Services styles */
@@ -140,7 +140,7 @@ a {
 /* Team styles */
 
 .team {
-  background: var(--second-background-color);
+  background: var(--secondary-background-color);
 }
 
 .team-name {
@@ -155,23 +155,23 @@ a {
   line-height: calc(19 / 16);
   /* text-align: center; */
   letter-spacing: 0.03em;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
 /* Footer styles */
 
 footer {
-  background: var(--first_background-color);
+  background: var(--primary-background-color);
 }
 
 .footer-logo-studio {
-  color: var(--hero-text-color);
+  color: var(--secondary-accent-color);
 }
 
 .footer-adress {
   font-style: normal;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-  color: var(--hero-text-color);
+  color: var(--secondary-accent-color);
 }
 
 .footer-adress:hover,
@@ -180,7 +180,7 @@ footer {
 .footer-email:focus,
 .footer-phone:hover,
 .footer-phone:focus{
-    color: var(--focus-color);
+    color: var(--primary-accent-color);
 }
 
 .footer-email {
@@ -192,7 +192,7 @@ footer {
 
 /* Do we need these oa not? */
 /* .footer-email:hover, .footer-email:focus {
-    color: var(--focus-color);
+    color: var(--primary-accent-color);
 } */
 
 .footer-phone {
@@ -213,7 +213,7 @@ footer {
 .portfolio-text {
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
 
 .portfolio-button{
@@ -233,6 +233,6 @@ footer {
 
 .portfolio-button:hover,
 .portfolio-button:focus{
-    background: var(--focus-color);
-    color: var(--hero-text-color);
+    background: var(--primary-accent-color);
+    color: var(--secondary-accent-color);
 }
