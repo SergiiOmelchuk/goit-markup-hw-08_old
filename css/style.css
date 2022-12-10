@@ -858,7 +858,7 @@ footer {
 }
 
 .checkbox:checked + .checkbox-label::after {
-  background-image: url(../images/icon\ check-2.svg);
+  background-image: url(../images/icon-check.svg);
 }
 
 .licence-text {
