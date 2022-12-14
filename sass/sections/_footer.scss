@@ -1,5 +1,5 @@
 footer {
-    background-color: var(--primary-background-color);
+    background-color: $primary-background-color;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -13,29 +13,56 @@ footer {
     margin-right: 70px;
 }
 
-.adding .social_item {
-    margin-left: 0;
-    margin-right: 10px;
+.adding {
+    margin-right: 93px;
+
+    .social_item {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    .social_link {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $secondary-accent-color;
+
+        &:hover, &:focus {
+                background-color: $primary-accent-color;
+                color: $secondary-accent-color;
+            }
+    }
+
+    
 }
 
-.adding .social_item:last-child {
-    margin-right: 0;
-}
+// .adding .social_item {
+//     margin-left: 0;
+//     margin-right: 10px;
+// }
 
-.adding .social_link {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--secondary-accent-color);
-}
+// .adding .social_item:last-child {
+//     margin-right: 0;
+// }
 
-.adding .social_link:hover,
-.adding .social_link:focus {
-    background-color: var(--primary-accent-color);
-    color: var(--secondary-accent-color);
-}
+// .adding .social_link {
+//     background-color: rgba(255, 255, 255, 0.1);
+//     color: $secondary-accent-color;
+// }
 
-.footer .logo {
-    display: block;
-    margin-bottom: 20px;
+// .adding .social_link:hover,
+// .adding .social_link:focus {
+//     background-color: $primary-accent-color;
+//     color: $secondary-accent-color;
+// }
+
+.footer {
+    .logo {
+            display: block;
+            margin-bottom: 20px;
+        }
 }
 
 .adress_item:not(:last-child) {
@@ -46,18 +73,17 @@ footer {
     font-style: normal;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-    color: var(--footer-contacts-color);
+    color: $footer-contacts-color;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+            color: $primary-accent-color;
+        }
 }
 
 .adress_link--accent {
-    color: var(--secondary-accent-color);
-}
-
-.adress_link:hover,
-.adress_link:focus {
-    color: var(--primary-accent-color);
+    color: $secondary-accent-color;
 }
 
 .social--footer {
@@ -71,12 +97,8 @@ footer {
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--secondary-accent-color);
+    color: $secondary-accent-color;
     margin-bottom: 20px;
-}
-
-.adding {
-    margin-right: 93px;
 }
 
 .dispatch_form {
@@ -90,7 +112,7 @@ footer {
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--secondary-accent-color);
+    color: $secondary-accent-color;
     margin-bottom: 20px;
 }
 
@@ -101,17 +123,17 @@ footer {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-right: 12px;
-    background-color: var(--primary-background-color);
+    background-color: $primary-background-color;
     padding-left: 16px;
-}
 
-.dispatc-input::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-
-    color: rgba(255, 255, 255, 0.6);
+    &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+    
+            color: $footer-contacts-color;
+        }
 }
 
 .dispatch-button {
@@ -119,7 +141,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 10px 28px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px $box-shadow-dispatch-button-color;
 }
 
 .dispatch-button_text {

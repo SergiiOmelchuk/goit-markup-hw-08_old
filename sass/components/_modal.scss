@@ -4,8 +4,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--backdrop-background);
+    background-color: $backdrop-background;
     transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-hidden {
+            .modal {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.1) rotate(360deg);
+            }
+        }
 }
 
 .modal {
@@ -18,7 +25,7 @@
     height: 581px;
     padding: 40px 40px 0;
 
-    background-color: var(--page-background-color);
+    background-color: $page-background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -35,8 +42,8 @@
     width: 30px;
     height: 30px;
 
-    background-color: var(--page-background-color);
-    color: var(--second-logo-color);
+    background-color: $page-background-color;
+    color: $second-logo-color;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
@@ -49,11 +56,12 @@
     transform: translate(-50%, -50%);
     fill: currentColor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+            color: $primary-accent-color;
+        }
 }
 
-.close-button_icon:hover {
-    color: var(--primary-accent-color);
-}
 
 .modal-form_tittle {
     display: block;
@@ -84,6 +92,15 @@
     border-radius: 4px;
     padding: 0 42px 0;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+            outline: none;
+            border: 1px solid #2196f3;
+        }
+
+    &:focus-within+.input-icon {
+        fill: $primary-accent-color;
+    }
 }
 
 .input-icon {
@@ -91,17 +108,8 @@
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
-    fill: var(--tittle-color);
+    fill: $tittle-color;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form_input:focus {
-    outline: none;
-    border: 1px solid #2196f3;
-}
-
-.modal-form_input:focus-within+.input-icon {
-    fill: var(--primary-accent-color);
 }
 
 .modal-form_input--textarea {
@@ -109,15 +117,15 @@
     resize: none;
     padding: 12px 16px;
     margin-bottom: 20px;
-}
 
-.modal-form_input--textarea::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
+    &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+    
+            color: rgba(117, 117, 117, 0.5);
+        }
 }
 
 .chekbox-wrapper {
@@ -145,22 +153,22 @@
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: #757575;
-}
 
-.lisence_label::after {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 12px;
-    content: " ";
-    width: 16px;
-    height: 15px;
-    background-image: url(../images/vector.svg);
-    background-size: contain;
-}
+    &::after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 12px;
+            content: " ";
+            width: 16px;
+            height: 15px;
+            background-image: url(../images/vector.svg);
+            background-size: contain;
+        }
 
-.lisence_input:checked+.lisence_label::after {
-    background-image: url(../images/icon-check.svg);
+        .lisence_input:checked+&::after {
+            background-image: url(../images/icon-check.svg);
+        }
 }
 
 .lisence_text {
@@ -184,9 +192,4 @@
 .is-hidden {
     opacity: 0;
     pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.1) rotate(360deg);
 }
