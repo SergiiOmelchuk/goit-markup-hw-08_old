@@ -768,9 +768,14 @@ footer {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
-.input-wrapper.chekbox-wrapper {
+.lisence {
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }
 
@@ -787,11 +792,11 @@ footer {
   overflow: hidden;
 } */
 
-.checkbox {
+.lisence_input {
   appearance: none;
 }
 
-.checkbox-label {
+.lisence_label {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -799,7 +804,7 @@ footer {
   color: #757575;
 }
 
-.checkbox-label::after {
+.lisence_label::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -811,11 +816,11 @@ footer {
   background-size: contain;
 }
 
-.checkbox:checked + .checkbox-label::after {
+.lisence_input:checked + .lisence_label::after {
   background-image: url(../images/icon-check.svg);
 }
 
-.licence-text {
+.lisence_text {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
