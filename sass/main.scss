@@ -1,3 +1,13 @@
-p {
-    color: red;
-}
+@import "base/reset";
+@import "base/container";
+@import "utilitties/variables";
+@import "components/logo";
+@import "components/button";
+@import "sections/header";
+@import "sections/hero";
+@import "sections/services";
+@import "sections/team";
+@import "sections/clients";
+@import "components/modal";
+@import "sections/portfolio";
+@import "sections/footer";
