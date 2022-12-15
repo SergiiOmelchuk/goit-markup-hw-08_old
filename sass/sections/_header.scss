@@ -1,7 +1,7 @@
 .page-header {
     border-bottom: 1px solid $header-border-color;
 
-    &.page-header--main {
+    &.page-header__main {
             border: none;
         }
 }
@@ -11,7 +11,7 @@
     padding: 0;
 }
 
-.header-nav_link {
+.header-nav__link {
     position: relative;
     display: block;
     padding: 32px 0;
@@ -27,11 +27,11 @@
         }
 }
 
-.header-nav_item:not(:last-child) {
+.header-nav__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-nav_link--active {
+.header-nav__link--active {
     color: $primary-accent-color;
 
     &::after {
@@ -57,18 +57,18 @@
     margin-left: auto;
 }
 
-.header-contacts_item:not(:first-child) {
+.header-contacts__item:not(:first-child) {
     margin-left: 50px;
 }
 
-.header-contacts_text {
+.header-contacts__text {
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
 }
 
-.header-contacts_link {
+.header-contacts__link {
     display: flex;
     align-items: center;
     color: $main-text-color;
@@ -79,7 +79,7 @@
         }
 }
 
-.header-contacts_icon {
+.header-contacts__icon {
     fill: currentColor;
     margin-right: 10px;
 }

@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: $main-font;
     background-color: $page-background-color;
     color: var(--tittle-color);
 }
