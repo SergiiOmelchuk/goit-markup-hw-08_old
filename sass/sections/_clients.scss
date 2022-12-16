@@ -1,19 +1,43 @@
 .clients__tittle {
-    font-size: 36px;
-    line-height: calc(42 / 36);
+    font-size: 28px;
+    line-height: calc(33 / 28);
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include mq(desktop) {
+        font-size: 36px;
+        line-height: calc(42 / 36);
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-bottom: 50px;
+    }
 }
 
 .clients__set {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
 }
 
 .clients__item {
     height: 92px;
-    flex-basis: calc(100% / 6 - 30px);
+    flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
+    margin-bottom: 30px;
+
+    @include mq(table) {
+            height: 92px;
+            flex-basis: calc(100% / 3 - 30px);
+            margin-left: 30px;
+    }
+
+    @include mq(desktop) {
+            height: 92px;
+            flex-basis: calc(100% / 6 - 30px);
+            margin-left: 30px;
+    }
 }
 
 .clients__link {

@@ -3,24 +3,57 @@
 }
 
 .team__tittle {
-    font-size: 36px;
-    line-height: calc(42 / 36);
+    font-size: 28px;
+    line-height: calc(33 / 28);
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include mq(desktop) {
+        font-size: 36px;
+        line-height: calc(42 / 36);
+        margin-bottom: 50px;
+    }
 }
 
 .team-set {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--item-set-gap));
-    margin-top: calc(-1 * var(--item-set-gap));
+    display: block;
+
+    @include mq(table) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: calc(-1 * var(--item-set-gap));
+        margin-top: calc(-1 * var(--item-set-gap));
+    }
+
+    @include mq(desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: calc(-1 * var(--item-set-gap));
+        margin-top: calc(-1 * var(--item-set-gap));
+    }
+    
 }
 
 .team-set__item {
-    flex-basis: calc(100% / 4 - var(--item-set-gap));
-    margin-left: var(--item-set-gap);
-    margin-top: var(--item-set-gap);
+    @include mq(table) {
+        flex-basis: calc(100% / 2 - var(--item-set-gap));
+        margin-left: var(--item-set-gap);
+        margin-top: var(--item-set-gap);
+    }
+
+    @include mq(desktop) {
+        flex-basis: calc(100% / 4 - var(--item-set-gap));
+        margin-left: var(--item-set-gap);
+        margin-top: var(--item-set-gap);
+    }
+}
+
+.team-set__wrapper {
+    background-color: $page-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-set__img {
@@ -34,13 +67,6 @@
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 10px;
-}
-
-.team-set__wrapper {
-    background-color: $page-background-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
 }
 
 .team-set__position {
@@ -58,10 +84,13 @@
 }
 
 .social__item {
-    flex-basis: calc(100% / 4 - 10px);
     margin-left: 10px;
     display: flex;
     justify-content: center;
+
+    @include mq(desktop) {
+        flex-basis: calc(100% / 4 - 10px);
+    }
 }
 
 .social__link {

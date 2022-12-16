@@ -6,7 +6,9 @@
     letter-spacing: 0.03em;
     color: $primary-accent-color;
 
-    margin-right: 93px;
+    @include mq(desktop) {
+        margin-right: 93px;
+    }
 }
 
 .logo__text--black {

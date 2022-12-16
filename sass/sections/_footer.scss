@@ -5,69 +5,53 @@ footer {
 }
 
 .footer-box {
-    display: flex;
-    align-items: baseline;
-}
+    display: block;
 
-.visit-card {
-    margin-right: 70px;
-}
-
-.adding {
-    margin-right: 93px;
-
-    .social__item {
-            margin-left: 0;
-            margin-right: 10px;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-    .social__link {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: $secondary-accent-color;
-
-        &:hover, &:focus {
-                background-color: $primary-accent-color;
-                color: $secondary-accent-color;
-            }
+    @include mq(desktop) {
+        display: flex;
+        align-items: baseline;
     }
-
-    
 }
-
-// .adding .social__item {
-//     margin-left: 0;
-//     margin-right: 10px;
-// }
-
-// .adding .social__item:last-child {
-//     margin-right: 0;
-// }
-
-// .adding .social__link {
-//     background-color: rgba(255, 255, 255, 0.1);
-//     color: $secondary-accent-color;
-// }
-
-// .adding .social__link:hover,
-// .adding .social__link:focus {
-//     background-color: $primary-accent-color;
-//     color: $secondary-accent-color;
-// }
 
 .footer {
     .logo {
-            display: block;
-            margin-bottom: 20px;
-        }
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
 
-.adress__item:not(:last-child) {
-    margin-bottom: 9px;
+.visit-card {
+    @include mq(phone) {
+        margin-bottom: 60px;
+    }
+
+    @include mq(phone-table) {
+        text-align: center;
+    }
+
+    @include mq(desktop) {
+        margin-right: 70px;
+    }
+    
 }
+
+.adress__item {
+    &:not(:last-child) {
+            margin-bottom: 8px;
+
+            @include mq(desktop) {
+                margin-bottom: 9px;
+            }
+        }   
+
+    &:last-child {
+        @include mq(phone) {
+            margin-bottom: 60px;
+        }
+    }
+}
+
 
 .adress__link {
     font-style: normal;
@@ -86,9 +70,48 @@ footer {
     color: $secondary-accent-color;
 }
 
+.adding {
+    
+    @include mq(desktop) {
+        margin-right: 93px;
+    }
+
+    .social__item {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .social__link {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $secondary-accent-color;
+
+        &:hover,
+        &:focus {
+            background-color: $primary-accent-color;
+            color: $secondary-accent-color;
+        }
+    }
+
+
+}
+
 .social--footer {
     margin-left: 0;
     padding: 0;
+
+    @include mq(phone) {
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+}
+
+.social__item--footer:last-child {
+    margin-right: 0;
+    
 }
 
 .adding__tittle {
@@ -99,11 +122,21 @@ footer {
     text-transform: uppercase;
     color: $secondary-accent-color;
     margin-bottom: 20px;
+
+    @include mq(phone) {
+        text-align: center;
+    }
 }
 
 .dispatch__form {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    @include mq(desktop) {
+        flex-direction: row;
+    }
+    
 }
 
 .dispatch__tittle {
@@ -114,17 +147,38 @@ footer {
     text-transform: uppercase;
     color: $secondary-accent-color;
     margin-bottom: 20px;
+
+    @include mq(phone) {
+        text-align: center;
+    }
 }
 
 .dispatch__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    margin-right: 12px;
     background-color: $primary-background-color;
     padding-left: 16px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+    
+            color: $footer-contacts-color;
+        }
+
+    @include mq(desktop) {
+        width: 358px;
+        margin-bottom: 0;
+        margin-right: 12px;
+    }
+    
+    
 
     &::placeholder {
             font-weight: 400;
