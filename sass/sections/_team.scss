@@ -66,6 +66,7 @@
     line-height: calc(19 / 16);
     letter-spacing: 0.03em;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -79,8 +80,16 @@
 
 .social {
     display: flex;
-    padding: 0 32px 30px;
+    padding: 0 122px 30px;
     margin-left: -10px;
+
+    @include mq(table) {
+        padding: 0 74px 24px;
+    }
+
+    @include mq(desktop) {
+        padding: 0 32px 30px;
+    }
 }
 
 .social__item {
