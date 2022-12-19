@@ -28,7 +28,6 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   color: var(--tittle-color);
-  outline: 1px solid green;
 }
 
 a {
