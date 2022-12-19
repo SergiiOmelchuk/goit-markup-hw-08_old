@@ -5,7 +5,7 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
              rgba(47, 48, 58, 0.4)),
         url("../images/hero-480.jpg");
-    max-width: 100%;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
     background-size: cover;
@@ -25,6 +25,7 @@
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url("../images/hero-768.jpg");
+        max-width: 768px;
     }
 }
 
@@ -42,6 +43,9 @@
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
                 url("../images/hero-1600.jpg");
+                max-width: 1600px;
+                padding-top: 200px;
+                padding-bottom: 200px;
     } 
 }
 
