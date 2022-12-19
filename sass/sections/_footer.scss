@@ -7,6 +7,13 @@ footer {
 .footer-box {
     display: block;
 
+    @include mq(table) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+
     @include mq(desktop) {
         display: flex;
         align-items: baseline;
@@ -28,6 +35,11 @@ footer {
 
     @include mq(phone-table) {
         text-align: center;
+    }
+
+    @include mq(table) {
+        margin-right: 165px;
+        margin-bottom: 60px;
     }
 
     @include mq(desktop) {
@@ -122,9 +134,10 @@ footer {
     text-transform: uppercase;
     color: $secondary-accent-color;
     margin-bottom: 20px;
+    text-align: center;
 
-    @include mq(phone) {
-        text-align: center;
+    @include mq(desktop) {
+        text-align: start;
     }
 }
 
@@ -147,9 +160,10 @@ footer {
     text-transform: uppercase;
     color: $secondary-accent-color;
     margin-bottom: 20px;
+    text-align: center;
 
-    @include mq(phone) {
-        text-align: center;
+    @include mq(desktop) {
+        text-align: start;
     }
 }
 

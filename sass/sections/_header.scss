@@ -7,8 +7,14 @@
 }
 
 .header-nav {
-    display: flex;
-    padding: 0;
+
+    display: none;
+
+    @include mq(table-desktop) {
+        display: flex;
+        padding: 0;
+    }
+    
 }
 
 .header-nav__link {
@@ -53,8 +59,15 @@
 }
 
 .header-contacts {
-    display: flex;
-    margin-left: auto;
+
+    display: none;
+
+    @include mq(table-desktop) {
+        display: flex;
+        margin-left: auto;
+    }
+
+    
 }
 
 .header-contacts__item:not(:first-child) {
@@ -82,4 +95,17 @@
 .header-contacts__icon {
     fill: currentColor;
     margin-right: 10px;
+}
+
+.mobile_open-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: $page-background-color;
+    border: none;
+    padding: 0;
+
+    @include mq(table-desktop) {
+        display: none;
+    }
 }

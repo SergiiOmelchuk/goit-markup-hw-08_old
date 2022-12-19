@@ -1,6 +1,4 @@
 .preferences {
-    padding-bottom: 60px;
-
     @include mq(table-desktop) {
         display: flex;
         flex-wrap: wrap;
